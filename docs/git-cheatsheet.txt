@@ -1,3 +1,6 @@
+# Cheatsheet für git 
+# vor jedem Befehl das "git" nicht vergessen!
+
 init - initieren des git
 
 status - aktueller status des git
@@ -12,4 +15,3 @@ config --global user.name "Name" - Änderung des anzeige Names
 
 config --global user.email "E-Mail" - E-Mail adresse ändern
 
-t4est
