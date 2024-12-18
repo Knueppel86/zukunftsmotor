@@ -1,0 +1,3 @@
+init - initieren des git
+
+status - aktueller status des git
