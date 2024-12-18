@@ -6,6 +6,8 @@ add - hinzufügen aller datein die wir angeben
 
 commit -m - Hinzufügen aller vorgemerkten aktionen in staging area ; -m option = "Kommentar hinterlassen"
 
+commit -a -m | -a option = Alle änderungen hochladen
+
 config --global user.name "Name" - Änderung des anzeige Names
 
 config --global user.email "E-Mail" - E-Mail adresse ändern
