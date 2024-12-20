@@ -15,3 +15,14 @@ config --global user.name "Name" - Änderung des anzeige Names
 
 config --global user.email "E-Mail" - E-Mail adresse ändern
 
+remote add "name" "Url" - Hinzufügen des remote standortes des git
+
+push - hochladen des gits
+
+push --set-upstream "name" "branch" - angeben welcher branch hochgeladen werden soll.
+
+branch "name" - anlegen eines neues branches
+
+branch - anzeigen aller branches
+
+checkout "name" - änderung des Workspaces im Branch
