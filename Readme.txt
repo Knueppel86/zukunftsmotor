@@ -4,4 +4,4 @@
 
 Dieses ist die Initiale ReadMe Datei
 
-Ich wurde zur Übung verändert. Bitte delete me #try
+Ich wurde zur Übung verändert. Bitte delete me #tr
