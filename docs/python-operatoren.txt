@@ -1,0 +1,32 @@
+Python Operatoren Cheatsheet
+
+Operatoren                  Erklärung
+
+        Arytmetische Operatoren
++                           Addition
+-                           Subtraktion
+*                           Multiplikation
+/                           Geteilt durch
+%                           Modulus
+//                          Floor Division
+**                          Exponieren
+
+        Assignment Operatoren
+
+=                           Eintrag in Variable
++=                          Variable mit Multiplikation und Wert danach berechnen
+-=                          Variable mit Subtraktion und Wert danach berechnen
+*=                          Variable mit Multiplikation und Wert danach berechnen
+/=                          Variable mit teilen und Wert danach berechnen
+%=                          Variable mit Modulus und Wert danach berechnen
+//=                         Variable mit der Floor Division und Wert danach berechnen
+**=                         Variable Exponiere und Wert danach berechnen
+
+        Comparison Operatoren
+
+==                          Ist gleich
+!=                          Ist nicht gleich
+>                           Größer als
+<                           kleiner als
+>=                          Größer oder gleich als
+<=                          KLeiner oder gleich als
