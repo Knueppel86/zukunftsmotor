@@ -30,3 +30,14 @@ Operatoren                  Erklärung
 <                           kleiner als
 >=                          Größer oder gleich als
 <=                          KLeiner oder gleich als
+Verbindet eine Zuweisung mit einer "IF" clause                        Ternärer Operator
+
+If                          "wenn"
+elif                        "wenndann"
+else                        "andernfalls"
+
+for i in range(1,2,3)           for schleife in einer Range zählen (von,bis,zählerstand)
+
+Liste = ["Listenteil1","Listenteil2"]   Listenschleifen
+for listenteil in Liste
+        print(listenteil)
