@@ -43,7 +43,7 @@ while True:
         def expo(a,b):
             return a ** b
 
-        choose1 = int(input("Bitte Zahl eingeben: \n"))
+        choose1 = (input("Bitte Zahl eingeben: \n"))
 
         zahl1 = int(input("Bitte Zahl eins eingeben: \n"))
         zahl2 = int(input("Bitte Zahl zwei eingeben: \n"))
@@ -56,6 +56,8 @@ while True:
                     Ergebnis = zahl1 - zahl2
             case "3":
                   Ergebnis = zahl1 + zahl2
+            case "4":
+                  exit()
 
         print("Willst du noch eine Zahl ausrechnen?")
         print("1 - Ja")
