@@ -41,3 +41,12 @@ for i in range(1,2,3)           for schleife in einer Range zählen (von,bis,zä
 Liste = ["Listenteil1","Listenteil2"]   Listenschleifen
 for listenteil in Liste
         print(listenteil)
+
+for each -                      ohne eine Variable einzugeben führt er den Code genauso oft aus wie das listenintem hat
+
+schleifen :
+
+break -                         unterbricht die schleife und führt weiteren Code aus
+Continue -                      bricht die aktuelle durchlauf wird beendet - nächster wird ausgefüht
+Else -                          wenn schleife erfolgreich durchgelaufen ist , führt er Else aus
+Pass -                          Er macht nix - zum testen als BsP
