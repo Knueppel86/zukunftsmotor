@@ -53,11 +53,23 @@ while True:
                 Ergebnis = addition(zahl1,zahl2)
                 print("Das Ergebnis lautet: \n" + str(Ergebnis))
             case "2":
-                    Ergebnis = zahl1 - zahl2
+                Ergebnis = subtraktion(zahl1,zahl2)
+                print("Das Ergebnis lautet: \n" + str(Ergebnis))
             case "3":
-                  Ergebnis = zahl1 + zahl2
+                Ergebnis = multiplikation(zahl1,zahl2)
+                print("Das Ergebnis lautet: \n" + str(Ergebnis))
             case "4":
-                  exit()
+                Ergebnis = division(zahl1,zahl2)
+                print("Das Ergebnis lautet: \n" + str(Ergebnis))
+            case "5":
+                Ergebnis = modulus(zahl1,zahl2)
+                print("Das Ergebnis lautet: \n" + str(Ergebnis))
+            case "6":
+                Ergebnis = floor(zahl1,zahl2)
+                print("Das Ergebnis lautet: \n" + str(Ergebnis))
+            case "7":
+                Ergebnis = expo(zahl1,zahl2)
+                print("Das Ergebnis lautet: \n" + str(Ergebnis))
 
         print("Willst du noch eine Zahl ausrechnen?")
         print("1 - Ja")

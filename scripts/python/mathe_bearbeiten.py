@@ -27,6 +27,18 @@ def menue_anzeigen():
             # ergebnis = addition(zahlen)
             # ergebnis_anzeigen(ergebnis)
             ergebnis_anzeigen(addition(zahlen_abfragen()))
+        case "2":
+            ergebnis_anzeigen(subtraktion(zahlen_abfragen()))
+        case "3":
+            ergebnis_anzeigen(multiplikation(zahlen_abfragen()))
+        case "4":
+            ergebnis_anzeigen(division(zahlen_abfragen()))
+        case "5":
+            ergebnis_anzeigen(expo(zahlen_abfragen()))
+        case "6":
+            ergebnis_anzeigen(floor(zahlen_abfragen()))
+        case "7":
+            ergebnis_anzeigen(modulus(zahlen_abfragen()))
         case "b":
             exit()
         case _:
@@ -50,6 +62,24 @@ def zahlen_abfragen():
 # addiert die Elemente 0 und 1 der Liste und gibt das Ergebnis als Rückgabewert zurück
 def addition(zahlen):
     return zahlen[0] + zahlen[1]
+
+def subtraktion(zahlen):
+    return zahlen[0] - zahlen[1]
+
+def multiplikation(zahlen):
+    return zahlen[0] * zahlen[1]
+
+def division(zahlen):
+    return zahlen[0] / zahlen[1]
+
+def modulus(zahlen):
+    return zahlen[0] % zahlen[1]
+
+def floor(zahlen):
+    return zahlen[0] // zahlen[1]
+
+def expo(zahlen):
+    return zahlen[0] ** zahlen[1]
 
 
 # wartet auf eine Eingabe des Benutzers und ignoriert die Eingabe
