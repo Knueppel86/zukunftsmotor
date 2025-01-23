@@ -46,5 +46,39 @@ Schiffe.append(Schiff("Hasso IV", 2010, 6890))
 finde_aeltestes_schiff()
 finde_staerkstes_schiff()
 
-# for x in Schiffe:
-#     print(x)
+####### Musterlösung P.B. ########
+
+# Schiffe = list()
+
+# class Schiff:
+#     def __init__(self, name, baujahr, leistung):
+#         self.name = name
+#         self.baujahr = baujahr
+#         self.leistung = leistung
+    
+#     def __str__(self):
+#         return f"{self.name} {self.baujahr} {self.leistung}"
+
+# def finde_aeltestes_schiff():
+#     aeltestes_schiff = Schiffe [0]
+#     for schiff in Schiffe:
+#         if schiff.baujahr < aeltestes_schiff.baujahr:
+#             aeltestes_schiff = schiff
+#     print(f"Der Name des ältesten Schiffs ist: {aeltestes_schiff.name}.")
+
+# def finde_staerkstes_schiff():
+#     staekstes_schiff = Schiffe[0]
+#     for schiff in Schiffe:
+#         if schiff.leistung > staekstes_schiff.leistung:
+#             staekstes_schiff = schiff
+#     print(f"Der Name des stärksten Schiffs ist: {staekstes_schiff.name}.")
+
+# Schiffe.append(Schiff("Gringo Freedom", 1950, 2312))
+# Schiffe.append(Schiff("Madonna II", 1980, 4400))
+# Schiffe.append(Schiff("Hasso IV", 2010, 6890))
+
+# finde_aeltestes_schiff()
+# finde_staerkstes_schiff()
+
+# # for x in Schiffe:
+# #     print(x)
