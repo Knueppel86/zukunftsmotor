@@ -26,10 +26,10 @@ class Schiff:
 
     def fang_fische(self, art, menge):
         
-        fischfang = [art,menge]
-        fischfang.append("Blauflossen Thunfisch", 111)
-        print(fischfang)
-        Schiffe.extend(fischfang)
+        #fischfang = [art,menge]
+        #fischfang.append("Blauflossen Thunfisch", 111)
+        #print(fischfang)
+        #Schiffe.extend(fischfang)
         #Schiffe.append(fischfang.art,fischfang.menge)
         #art = fischfang.art
         #menge = fischfang.menge
@@ -40,6 +40,10 @@ class Schiff:
         pass
     
     def melde_fischfang(self):
+    #wenn name == gringo
+        #dann melde fischfang
+        #wenn name == hasso
+        #melde fischfang
         pass
     
     def __str__(self):
