@@ -106,50 +106,50 @@ finde_aeltestes_schiff()
 
 ##### Musterlösung #####
 
-Schiffe = list()
+# Schiffe = list()
 
-class Schiff:
-    def __init__(self, name, baujahr, leistung):
-        self.name = name
-        self.baujahr = baujahr
-        self.leistung = leistung
-        self.fischfang = list()
+# class Schiff:
+#     def __init__(self, name, baujahr, leistung):
+#         self.name = name
+#         self.baujahr = baujahr
+#         self.leistung = leistung
+#         self.fischfang = list()
     
-    def fang_fische(self, art, menge):
-        #self.fischfang.append(f"{art}: {menge}t") # einfache Variante
-        self.fischfang.append([art, menge]) # vorrausschauende Variante
+#     def fang_fische(self, art, menge):
+#         #self.fischfang.append(f"{art}: {menge}t") # einfache Variante
+#         self.fischfang.append([art, menge]) # vorrausschauende Variante
     
-    def melde_fischfang(self):
-        if self.fischfang:
-            #for fang in self.fischfang:
-            for fang in sorted(self.fischfang): # BONUS
-                #print(f"{self.name} meldet {fang}") # einfache Variante
-                print(f"{self.name} meldet {fang[0]}: {fang[1]}t") # vorrausschauende Variante
-        else:
-            print(f"{self.name} meldet: keine Fische gefangen.")
+#     def melde_fischfang(self):
+#         if self.fischfang:
+#             #for fang in self.fischfang:
+#             for fang in sorted(self.fischfang): # BONUS
+#                 #print(f"{self.name} meldet {fang}") # einfache Variante
+#                 print(f"{self.name} meldet {fang[0]}: {fang[1]}t") # vorrausschauende Variante
+#         else:
+#             print(f"{self.name} meldet: keine Fische gefangen.")
     
-    def __str__(self):
-        return f"{self.name} {self.baujahr} {self.leistung}"
+#     def __str__(self):
+#         return f"{self.name} {self.baujahr} {self.leistung}"
 
-Schiffe.append(Schiff("Gringo Freedom", 1950, 2312))
-Schiffe.append(Schiff("Madonna II", 1980, 4400))
-Schiffe.append(Schiff("Hasso IV", 2010, 6890))
-
-
-for x in Schiffe:
-    # if x.name == "Gringo Freedom":
-    #     x.fang_fische("Pazifischer Kabeljau", 666)
-    #     x.fang_fische("Blauflossen-Thunfisch", 3)
-    #     x.fang_fische("Heilbutt", 69)
-    if x.name == "Madonna II":
-        x.fang_fische("Blauflossen-Thunfisch", 7)
-        x.fang_fische("Gestreifter Marlin", 13)
-        x.fang_fische("Gelbflossen-Thunfisch", 666)
-    if x.name == "Hasso IV":
-        x.fang_fische("Blauflossen-Thunfisch", 111)
-        x.fang_fische("Humboldt-Kalmar", 777)
-        x.fang_fische("Pazifischer Makrelenhecht", 42)
+# Schiffe.append(Schiff("Gringo Freedom", 1950, 2312))
+# Schiffe.append(Schiff("Madonna II", 1980, 4400))
+# Schiffe.append(Schiff("Hasso IV", 2010, 6890))
 
 
-for schiff in Schiffe:
-    schiff.melde_fischfang()
+# for x in Schiffe:
+#     # if x.name == "Gringo Freedom":
+#     #     x.fang_fische("Pazifischer Kabeljau", 666)
+#     #     x.fang_fische("Blauflossen-Thunfisch", 3)
+#     #     x.fang_fische("Heilbutt", 69)
+#     if x.name == "Madonna II":
+#         x.fang_fische("Blauflossen-Thunfisch", 7)
+#         x.fang_fische("Gestreifter Marlin", 13)
+#         x.fang_fische("Gelbflossen-Thunfisch", 666)
+#     if x.name == "Hasso IV":
+#         x.fang_fische("Blauflossen-Thunfisch", 111)
+#         x.fang_fische("Humboldt-Kalmar", 777)
+#         x.fang_fische("Pazifischer Makrelenhecht", 42)
+
+
+# for schiff in Schiffe:
+#     schiff.melde_fischfang()
