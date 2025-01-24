@@ -26,7 +26,7 @@ listname.insert(1, "name") - hängt einen Eintrag an der Position an.
 
 ## Listen removen
 
-listname.remove("name") - Löschen eines eintrages mit den namen.
+listname.remove("name") - Löschen eines eintrages mit den ERSTEN namen.
 listname.pop(eintragnummer) - Löscht den eintrag an indexnummer "x". Ohne eintragnummer wird der letzte eintrag gelöscht.
 
 del listname[eintragsnummer] - selbe wie listname.pop(eintragsnummer).
