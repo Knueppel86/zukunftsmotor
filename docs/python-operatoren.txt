@@ -50,3 +50,5 @@ break -                         unterbricht die schleife und führt weiteren Cod
 Continue -                      bricht die aktuelle durchlauf wird beendet - nächster wird ausgefüht
 Else -                          wenn schleife erfolgreich durchgelaufen ist , führt er Else aus
 Pass -                          Er macht nix - zum testen als BsP
+
+isinstance(schleifenobjekt, klasse) - checkt ob keine fehler in der liste für die klasse ist.

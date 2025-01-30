@@ -1,0 +1,28 @@
+-eq, -ieq, -ceq:                                    gleich
+-ne, -ine, -cne:                                    ungleich
+-gt, -igt, -cgt:                                    größer als
+-ge, -ige, -cge:                                    größer als oder gleich
+-lt, -ilt, -clt:                                    kleiner als
+-le, -ile, -cle:                                    kleiner als oder gleich
+
+Zuordnung
+
+-like, -ilike, -clike:                              Zeichenfolge stimmt mit Platzhaltermuster überein
+-notlike, -inotlike, -cnotlike:                     Zeichenfolge stimmt nicht mit Platzhaltermuster überein
+-match, -imatch, -cmatch:                           Zeichenfolge stimmt mit RegEx-Muster überein
+-notmatch, -inotmatch, -cnotmatch:                  Zeichenfolge stimmt nicht mit RegEx-Muster überein
+
+Ersatz
+
+-replace, -ireplace, -creplace:                     ersetzt Zeichenfolgen, die mit einem RegEx-Muster übereinstimmen
+
+Einschluss
+
+-contains, -icontains, -ccontains:                  Auflistung enthält einen Wert.
+-notcontains, -inotcontains, -cnotcontains:         Auflistung enthält einen Wert nicht.
+-in, -iin, -cin:                                    Der Wert ist in einer Sammlung enthalten
+-notin, -inotin, -cnotin:                           Der Wert ist nicht in einer Sammlung enthalten
+Typ
+
+-is:                                                Beide Objekte sind vom selben Typ.
+-isnot:                                             Die Objekte sind nicht vom selben Typ.
