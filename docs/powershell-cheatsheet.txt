@@ -2,6 +2,8 @@ Variablen Speichern
 
 write-host                                  - Gibt eine Ausgabe an ; wie print
 
+New-Item -itemType Directory or File        - Neues Item Anlegen, File oder Ordner - Direkter oder Relativer Pfad
+
 $name = Objekt                              - Variable anlegen
 
 $name.GetType()                             - Datentyp der Variable anzeigen
