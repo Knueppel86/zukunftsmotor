@@ -19,7 +19,8 @@ Get-ChildItem -Path "ordner"                - Gibt die Ordnerstruktur des Angege
 for ($i=1; $i -le 5; $i++)                  - For schleife , Variable bennenen und belegen ; 
                                             - "-le" "Zahl" gibt an wie oft es wiederholt werden soll; ++ Variable um einen wert erhöhen.
 
+"befehl" -Recurse                           - Zeigt alle Ordner mit Unterordnern und Datein an.
 
+Select Fullname                             - Zeigt vollen Namen an.
 
-
-
+foreach (array oder variable)

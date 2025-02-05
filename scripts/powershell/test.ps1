@@ -1,5 +1,16 @@
-#### Powershell TestScript ####
+# #### Powershell TestScript ####
 
-for ($i = 1; $i -le 5; $i++) {
-    Write-Host $i
-}
+# $folderTest = Get-ChildItem -path C:\GitRepo\ -Recurse
+
+# foreach ($schleifenNr in $folderTest){
+#     write-Host ("Ausgabe: $schleifenNr")
+#     write-Host ("Letzter Zugriff:", $schleifenNr.LastAccessTime, "!")
+# }
+
+# $letterArray = 'a','b','c','d'
+# foreach ($letter in $letterArray)
+# {
+#   Write-Host $letter
+# }
+
+Get-Service | Where-Object Name -like Themes
