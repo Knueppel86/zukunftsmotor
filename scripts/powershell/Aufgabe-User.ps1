@@ -1,19 +1,3 @@
-### Braindump ###
-
-# Text als Willkommensnachricht
-
-#  Abfrage des Usernamens
-#  (Fehlermeldung falls userschon exisitert??)
-
-#  Abfrage des Passwords als sicheren strihing
-
-#  ausgabe das Nutzer mit Passwort angelegt wurde
-
-
-#  abfrage nach einer Gruppe
-
-#  ausgabe nutzer wurde der gruppe hinzugefügt
-
  ### Anfang Code ###
 
  Write-Host "### Willkommen zum SuperDuperUserAnlegenScript ###"
