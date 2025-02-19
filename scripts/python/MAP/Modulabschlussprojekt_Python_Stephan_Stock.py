@@ -9,14 +9,6 @@ class Schiff:
     def __str__(self):
         return f"Das Schiff {self.Schiffname} wurde im Jahr {self.Baujahr} gebaut und kommt aus {self.Heimathafen}."
     
-
-liste_schiffe = list()
-with open("schiffe.csv", "r", encoding="latin-1") as csv_schiffe:
-    next(csv_schiffe)
-    for zeile in csv_schiffe:
-        Schiffname, Baujahr, Heimathafen = zeile.strip().split(";")
-        liste_schiffe.append(Schiff(Schiffname,Baujahr,Heimathafen))
-
 class Fisch:
     def __init__(self, Fischart,Fanggebiet,Preis):
         self.Fischart = Fischart
@@ -26,12 +18,7 @@ class Fisch:
     def __str__(self):
         return f"Die Fischart {self.Fischart} wurde im Gebiet {self.Fanggebiet}gefangen, und kostet {self.Preis} das Kilo"
 
-liste_fische = list()
-with open("fische.csv", "r", encoding="latin-1") as csv_fische:
-    next(csv_fische)
-    for zeile in csv_fische:
-        Fischart, Fanggebiet, Preis =zeile.strip().split(";")
-        liste_fische.append(Fisch(Fischart,Fanggebiet,int(Preis)))
+
 
 class Fangergebnis:
     def __init__(self, fangSchiff,fangKapitän,fangDatum,fangFisch,fangFangmenge):
@@ -44,10 +31,43 @@ class Fangergebnis:
     def __str__(self):
         return f"Das Schiff {self.Schiff} mit dem Kapitän {self.Kapitän} hat am {self.Datum} den {self.Fisch} mit einer Menge von {self.Fangmenge} Tonnen gesammelt."
 
-# def finde_fisch():
-#     for fisch in liste_fangmenge:
-#         if x.fangfisch == Fischart:
-#             return fisch
+############ Listen Einlesen
+
+liste_schiffe = list()
+with open("schiffe.csv", "r", encoding="latin-1") as csv_schiffe:
+    next(csv_schiffe)
+    for zeile in csv_schiffe:
+        Schiffname, Baujahr, Heimathafen = zeile.strip().split(";")
+        liste_schiffe.append(Schiff(Schiffname,Baujahr,Heimathafen))
+
+liste_fische = list()
+with open("fische.csv", "r", encoding="latin-1") as csv_fische:
+    next(csv_fische)
+    for zeile in csv_fische:
+        Fischart, Fanggebiet, Preis =zeile.strip().split(";")
+        liste_fische.append(Fisch(Fischart,Fanggebiet,int(Preis)))
+
+def finde_fisch(fischname):
+    for fisch in liste_fische:
+        if fisch.Fischart == fischname:
+            return fisch
+
+liste_fangmenge = list()
+with open("fangergebnisse.csv" , "r" , encoding="latin-1") as csv_fangergebnisse:
+    next(csv_fangergebnisse)
+    for zeile in csv_fangergebnisse:
+        Schiffname, Kapitän, Datum, Fischname, Fangmenge, = zeile.strip().split(";")
+        liste_fangmenge.append(Fangergebnis(Schiffname,Kapitän,Datum,finde_fisch(Fischname), int(Fangmenge)))
+
+############## Definitionen Definieren
+
+# Fische die eingelesen werden automatisch in die Klassen packen
+
+
+        
+# Platzhalter für finde_schiffe
+
+# Definition bester Tag wo ausgerechnet wird welcher Tag der Fänge am besten war
 
 def bester_tag():
     dict_fangtag = dict()
@@ -62,46 +82,95 @@ def bester_tag():
         if fangmenge > btag:
             btag = fangmenge
             bdatum = datum
-            print(f"{btag} - {bdatum}")
+    print(f"\nDer Ergiebigste Tag war der {bdatum} mit einer Fangmenge von {btag} Tonnen.\n")
 
-    print(f"Der Ergiebigste Tag war der {bdatum} mit einer Fangmenge von {btag} Tonnen.")
+# Hier wird bearbeitet welcher Kapitän im Zeitraum die Dicksten Fische am Haken hatte.
 
-# def bester_kapitaen():
-    # best_cpt = liste_fische[0]
-    # dict_preis = dict()
-    # for x in liste_fangmenge:
-    #     if x.Kapitän in dict_preis:
-    #         dict_preis[x.Kapitän] += x.Fisch
-    #         dict_preis[x.Fisch] = best_cpt.Preis
-    #     else:
-    #         dict_preis[x.Kapitän] = x.Fisch
-    #         dict_preis[x.Fisch] = best_cpt.Preis
+def bester_kapitaen():
 
-    # bpreis = 0
-    # for name , preis in dict_preis.items():
-    #     if best_cpt.Preis > bpreis:
-    #         bpreis = best_cpt.Preis
+    dict_cpt = dict()
+
+    for x in liste_fangmenge:
+        if x.Kapitän in dict_cpt:
+            dict_cpt[x.Kapitän] += x.Fangmenge * x.Fisch.Preis
+        else:
+            dict_cpt[x.Kapitän] = x.Fangmenge * x.Fisch.Preis
     
-    # print(f"Der Beste Kapitän ist {name} mit einem gesamtwert von: {bpreis}")
-    
-    
-    
-    # Liste Fangmenge durchgehen und die Kapitäne mit den Fischen und der Anzahl zusammenrechnen
+    bfang = 0
+    for Kapitän, fangmenge in dict_cpt.items():
+        if fangmenge > bfang:
+            bfang = fangmenge
+            bcpt = Kapitän
+    print(f"\nDer beste Kapitän war:{bcpt}, mit einer Fangmenge von: {bfang} Tonnen.\n")
 
-    # kapitän , datum? , fisch und die Fangmenge müssen addiert oder verglichen werden.WindowsError
+# Menübereich bearbeitung
 
-    # der wert der gefangen fische muss dann mit der preistabelle errechnet werden 
+def menu():
+    print("Hauptmenü")
+    print("Wähle was du machen willst:")
+    print("(1) Abfrage starten")
+    print("(2) Fangergebnisse bearbeiten")
+    print("(3) Beenden")
+    print("------------------------------------")
+    auswahl=input("Bitte gebe deine Auswahl ein:\n")
 
-    # daraus muss der erfolgreichste cpt hervorgehen und ausgegeben werden.
+    match auswahl:
+        case "1":
+            abfragen()
+        case "2":
+            fangergebnisse()
+        case "3":
+            exit()
+        case _:
+            print("Auswahl Ungültig")
 
 
-liste_fangmenge = list()
-with open("fangergebnisse.csv" , "r" , encoding="latin-1") as csv_fangergebnisse:
-    next(csv_fangergebnisse)
-    for zeile in csv_fangergebnisse:
-        Schiff, Kapitän, Datum, Fisch, Fangmenge, = zeile.strip().split(";")
-        liste_fangmenge.append(Fangergebnis(Schiff,Kapitän,Datum,Fisch, int(Fangmenge)))
+def abfragen():
+    print("\n### Menü: Abfragen ###")
+    print("Wähle aus was du abfragen möchtest")
+    print("(1) Bester Tag")
+    print("(2) Bester Kapitän")
+    print("(3) Hauptmenu")
+    auswahl = input("Bitte gebe deine Auswahl ein: \n")
 
+    match auswahl:
+        case "1":
+            bester_tag()
+            abfragen()
+        case "2":
+            bester_kapitaen()
+            abfragen()
+        case "3":
+            menu()
+        case _:
+            print("Auswahl Ungültig")
+
+def delete_eintrag():
+    print("\n### Menü: Eintrag Entfernen")
+
+def fangergebnisse():
+    print("\n### Menu: Fangergebnisse ###")
+    print("Wähle aus was du machen willst:")
+    print("(1) Eintrag anlegen(noch nicht implementiert)")
+    print("(2) Eintrag Löschen")
+    print("(3) Liste Speichern")
+    print("Hauptmenü")
+    auswahl = input("Bitte gebe deine Auswahl ein:")
+
+    match auswahl:
+        case "1":
+            print("Noch nicht angelegt")
+            fangergebnisse()
+        case "2":
+            delete_eintrag()
+        case "3":
+            save_list()
+        case "4":
+            menu()
+        case _:
+            print("Ungültige Auswahl")
+
+######## Bereich für Probieren
 
 # for x in liste_schiffe:
 #     print(x)
@@ -112,6 +181,13 @@ with open("fangergebnisse.csv" , "r" , encoding="latin-1") as csv_fangergebnisse
 # for x in liste_fangmenge:
 #     print(x)
 
-bester_tag()
+#bester_tag()
 
 #bester_kapitaen()
+
+# for x in liste_fangmenge:
+#     print(x)#
+
+##### Start des Programmes
+
+menu()
